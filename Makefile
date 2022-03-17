@@ -12,7 +12,6 @@ CFILES = \
     fiber_cond.c \
     fiber.c \
     fiber_barrier.c \
-    fiber_io.c \
     fiber_rwlock.c \
     hazard_pointer.c \
     work_stealing_deque.c \
@@ -100,7 +99,7 @@ endif
 USE_COMPILER_THREAD_LOCAL ?= 1
 LINKER_SHARED_FLAG ?= -shared
 FAST_SWITCHING ?= 1
-LDFLAGSAFTER ?= 
+LDFLAGSAFTER ?=
 
 ifeq ($(USE_COMPILER_THREAD_LOCAL),1)
 CFLAGS += -DUSE_COMPILER_THREAD_LOCAL

@@ -274,9 +274,6 @@ int fiber_manager_init(size_t num_threads)
 
     pthread_attr_destroy(&attr);
 
-    if(!fiber_io_init()) {
-        return FIBER_ERROR;
-    }
     if(!fiber_event_init()) {
         return FIBER_ERROR;
     }
